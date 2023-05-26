@@ -8,3 +8,30 @@
 body {
     font-family: 'NanumSquareNeo';
 }
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 20vw;
+    left: 10vw;
+    z-index: 4;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+h1 span {
+    display: block;
+}
+
+p {
+    position: absolute;
+    bottom: 10vw;
+    right: 10vw;
+    width: 200px;
+    line-height: 1.5;
+    font-size: 0.8rem;
+    color: darkgray;
+}
