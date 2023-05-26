@@ -21,6 +21,21 @@ body {
     overscroll-behavior: none;
 }
 
+.navbar-nav .nav-item a.nav-link:hover::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #000;
+    animation: underline 0.2s linear forwards;
+  }
+  
+@keyframes underline {
+    100% {
+      width: 100%;
+    }
+}
+
 h1 {
     font-size: 4rem;
     line-height: 1.5;
