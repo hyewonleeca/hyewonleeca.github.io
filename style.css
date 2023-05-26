@@ -1,0 +1,10 @@
+@font-face { 
+    font-family: 'NanumSquareNeo';
+    src: url('/fonts/NanumSquareNeo-Variable.eot');
+    src: url('/fonts/NanumSquareNeo-Variable.eot') format('embedded-opentype'),
+    url('/fonts/NanumSquareNeo-Variable.woff') format('woff');
+}
+
+body {
+    font-family: 'NanumSquareNeo';
+}
