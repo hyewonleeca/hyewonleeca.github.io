@@ -14,7 +14,7 @@ body {
     font-family: 'NanumSquareNeo';
     color: var(--text-color);
     background: var(--bg-color);
-    transition: 0.3s ease-out;
+    transition: 0.5s ease-out;
     overflow-x: hidden;
     max-width: 100%;
     width: 100%;
@@ -49,7 +49,7 @@ h1 {
     hyphens: auto;
 }
 
-h1 span {
+h1 span:not(#name) {
     display: block;
 }
 
@@ -62,12 +62,7 @@ p {
     color: darkgray;
 }
 
-h2 {
-    font-size: 2rem;
-    max-width: 400px;
-}
-
-section:not(#work) {
+#main {
     min-height: 100vh;
     width: 100%;
     position: relative;
@@ -77,6 +72,28 @@ section:not(#work) {
     padding: 50px 10vw;
     margin: auto;
     place-items: center;
+}
+
+#info {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    padding: 14vw 4vw;
+    margin: auto;
+}
+
+h4 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+}
+
+h3 {
+    display: inline;
+    font-weight: 200;
+    font-size: 1.5rem;
+    padding-right: 2%;
 }
 
 #work {
