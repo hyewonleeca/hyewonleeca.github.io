@@ -100,10 +100,10 @@ p {
     color: darkgray;
 }
 
-/* about page */
-#about div {
+/* skill page */
+#skill div {
     min-height: 30vh;
-    margin: 10px 5vw;
+    margin: 40px 3vw;
 }
 
 h4 {
@@ -114,6 +114,18 @@ h4 {
 h3 {
     display: inline;
     font-weight: 200;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding-right: 2%;
+}
+
+h5 {
+    font-weight: 300;
+    line-height: 2;
+    font-size: 1rem;
+}
+
+/* about page */
+#about div {
+    min-height: 30vh;
+    margin: 10px 5vw;
 }
