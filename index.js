@@ -1,13 +1,20 @@
-  // Get all the nav-link elements
-  const navLinks = document.querySelectorAll('.nav-link');
+// handling scroll event for navbar
+window.addEventListener("scroll", handleScroll);
 
-  // Add click event listener to each nav-link
-  navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      // Remove active class from all nav-links
-      navLinks.forEach(link => link.classList.remove('active'));
-      
-      // Add active class to the clicked nav-link
-      this.classList.add('active');
+function handleScroll() {
+const navbar = document.getElementById("navbar");
+const navLinks = navbar.querySelectorAll(".nav-page");
+const sections = document.querySelectorAll("section");
+
+sections.forEach((section, index) => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+
+    if (window.pageYOffset >= top && window.pageYOffset < top + height) {
+    navLinks.forEach((navLink) => {
+        navLink.classList.remove("active");
     });
-  });
+    navLinks[index].classList.add("active");
+    }
+});
+}

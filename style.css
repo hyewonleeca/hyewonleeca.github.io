@@ -23,17 +23,26 @@ body {
     margin: auto;
 }
 
-.left-nav-items .nav-item .nav-link {
+.nav-outlink {
     font-size: 20pt;
 }
 
-.right-nav-items .nav-item .nav-link {
+.nav-name {
+    position: fixed;
+    font-weight: 700;
+}
+
+.active:matches(.nav-name) {
+    display: none;
+}
+
+.nav-page {
     font-size: 16pt;
 }
 
-.right-nav-items .nav-item .nav-link:active {
-    font-weight: 500;
+.active {
     text-transform: uppercase;
+
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -50,63 +59,51 @@ body {
     left: 0;
     bottom: -1px;
     animation: underline 0.2s linear forwards;
-  }
+}
   
-  @keyframes underline {
+@keyframes underline {
     100% {
       width: 100%;
     }
-  }
+}
 
 /* page settings */
 section {
+    padding-top: 160px;
     min-height: 100vh;
     width: 100%;
     position: relative;
     margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 /* main page */
-#main {
-    padding: 50px 10vw;
-}
-
 h1 {
     font-size: 4rem;
     line-height: 1.5;
     font-weight: 600;
-    margin-bottom: 1rem;
-    position: absolute;
-    top: 20vw;
-    left: 10vw;
-    z-index: 4;
     overflow-wrap: break-word;
     hyphens: auto;
 }
 
-h1 span:not(#name) {
+h1 span {
     display: block;
 }
 
 p {
     position: absolute;
     bottom: 10vw;
-    right: 10vw;
     width: 200px;
     font-size: 0.8rem;
     color: darkgray;
 }
 
 /* about page */
-#about {
-    padding-top: 10vw;
-}
-
 #about div {
-    min-height: 20vh;
-    padding: 5vw;
+    min-height: 30vh;
+    margin: 10px 5vw;
 }
 
 h4 {
