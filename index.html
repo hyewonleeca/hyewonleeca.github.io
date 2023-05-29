@@ -17,8 +17,8 @@
   <title>Hyewon Lee</title>
 </head>
 <body>
-   <!-- navbar -->
-  <nav class="navbar fixed-top navbar-expand bg-transparent">
+  <!-- navbar -->
+  <nav class="navbar fixed-top navbar-expand bg-transparent" id="navbar">
     <div class="container-fluid justify-content-between">
       <!-- left nav items -->
       <ul class="navbar-nav left-nav-items mt-5 ms-5 ps-5">
@@ -51,7 +51,7 @@
   </nav>
 
   <!-- pages -->
-  <div class="container">
+  <div class="container" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true" tabindex="0">
     <section id="main">
       <h1>
         <span>Hi there 👋</span>
@@ -62,14 +62,16 @@
     </section>
 
     <section id="skills">
+      skills
     </section>
 
     <section id="work">
+      work
     </section>
 
     <section id="about">
       <!-- education -->
-      <div class="education">
+      <div id="education">
         <h4>{% Education %}</h4><br><br>
         <h3 style="font-weight: 400;">Software Engineering Technician</h3>
         <h3>Conestoga College</h3>
@@ -78,9 +80,9 @@
         <h3>Hanyang University</h3>
         <h3>2015-2020</h3>
         <h3 style="font-style: italic; color: #999999;">(Incomplete)</h3>
-      </div><br><br><br><br>
+      </div>
       <!-- contact -->
-      <div class="contact">
+      <div id="contact">
         <h4>{% Contact %}</h4><br><br>
         <address>
           <h3 style="font-weight: 400; display: inline-block; vertical-align: middle; margin-right: 5px;">hlee7013@conestogac.on.ca</h3>
