@@ -21,6 +21,8 @@ body {
     height: 160px;
     max-width: 1600px;
     margin: auto;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .nav-outlink {
@@ -28,31 +30,25 @@ body {
 }
 
 .nav-name {
+    display: none;
     position: fixed;
     font-weight: 700;
 }
-
-.active:matches(.nav-name) {
-    display: none;
-}
-
 .nav-page {
     font-size: 16pt;
-}
-
-.active {
-    text-transform: uppercase;
-
+    font-weight: 500;
+    color: dimgray;
 }
 
 .navbar-nav .nav-item .nav-link {
     position: relative;
 }
 
-.navbar-nav .nav-item a.nav-link:hover::after {
+.navbar-nav .nav-item a.nav-link:hover::after,
+.navbar-nav .nav-item a.nav-link.active::after {
     content: "";
     display: block;
-    height: 2px;
+    height: 3px;
     width: 0;
     background-color: #000;
     position: absolute;
