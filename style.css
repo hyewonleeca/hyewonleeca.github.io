@@ -124,6 +124,25 @@ h5 {
     font-size: 1rem;
 }
 
+#utils .border{
+    display: inline-flex;
+    margin-block-end: 20px;
+    margin-inline-end: 10px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+#utils span{
+    color:#000;
+    font-weight: 500;
+}
+
+#utils span img{
+    height: 20pt;
+    max-width: 24px;
+    margin-right: 10px;
+}
+
 /* about page */
 #about div {
     min-height: 30vh;
