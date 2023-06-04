@@ -65,8 +65,9 @@ body {
 
 /* page settings */
 section {
-    padding-top: 160px;
+    margin-top: 160px;
     min-height: 100vh;
+    max-width: 1600px;
     width: 100%;
     position: relative;
     margin: auto;
@@ -76,6 +77,10 @@ section {
 }
 
 /* main page */
+#main{
+    padding: 200px;
+}
+
 h1 {
     font-size: 4rem;
     line-height: 1.5;
@@ -99,7 +104,7 @@ p {
 /* skill page */
 #skill div {
     min-height: 30vh;
-    margin: 40px 3vw;
+    margin: 1vh 160px;
 }
 
 h4 {
