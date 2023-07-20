@@ -37,7 +37,7 @@ body {
 .nav-page {
     font-size: 16pt;
     font-weight: 500;
-    color: dimgray;
+    color: gray;
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -98,7 +98,7 @@ p {
     bottom: 10vw;
     width: 200px;
     font-size: 0.8rem;
-    color: darkgray;
+    color: silver;
 }
 
 /* skill page */
