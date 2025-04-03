@@ -35,7 +35,8 @@ body {
     font-weight: 700;
 }
 .nav-page {
-    font-size: 16pt;
+    font-size: clamp(16px, 2vw, 20px);
+    
     font-weight: 500;
     color: gray;
 }
@@ -78,14 +79,13 @@ section {
 
 /* main page */
 #main{
-    padding: 200px;
+    padding: 20vw;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: clamp(40px, 5vw, 60px);
     line-height: 1.5;
     font-weight: 600;
-    overflow-wrap: break-word;
     hyphens: auto;
 }
 
