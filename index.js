@@ -18,3 +18,9 @@ sections.forEach((section, index) => {
     }
 });
 }
+
+// scroll to the top when refresh
+document.addEventListener("DOMContentLoaded", function() {
+    window.history.replaceState({}, document.title, window.location.pathname);
+    window.scrollTo(0, 0);
+});
