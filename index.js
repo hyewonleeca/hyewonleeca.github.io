@@ -1,11 +1,12 @@
-// handling scroll event for navbar
-window.addEventListener("scroll", handleScroll);
-
-function handleScroll() {
+// constants
 const navbar = document.getElementById("navbar");
 const navLinks = navbar.querySelectorAll(".nav-page");
 const sections = document.querySelectorAll("section");
 
+// handling scroll event for navbar
+window.addEventListener("scroll", handleScroll);
+
+function handleScroll() {
 sections.forEach((section, index) => {
     const top = section.offsetTop;
     const height = section.offsetHeight;
@@ -19,8 +20,15 @@ sections.forEach((section, index) => {
 });
 }
 
-// scroll to the top when refresh
-document.addEventListener("DOMContentLoaded", function() {
-    window.history.replaceState({}, document.title, window.location.pathname);
-    window.scrollTo(0, 0);
-});
+// scroll to section
+navLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+        event.preventDefault();
+        
+        const targetId = this.getAttribute("data-target");
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+  });
