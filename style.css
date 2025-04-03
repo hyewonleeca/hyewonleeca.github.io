@@ -104,8 +104,7 @@ p {
 
 /* skills page */
 #skills div {
-    min-height: 30vh;
-    margin: 1vh 160px;
+    margin: 1vh 10vw;
 }
 
 h4 {
@@ -149,12 +148,10 @@ h5 {
 
 /* works page */
 #works div {
-    min-height: 30vh;
-    margin: 1vh 160px;
+    margin: 1vh 10vw;
 }
 
 /* about page */
 #about div {
-    min-height: 30vh;
-    margin: 5vh 10vw;
+    margin: 40px 10vw;
 }
