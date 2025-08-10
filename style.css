@@ -148,8 +148,34 @@ h5 {
 
 /* works page */
 #works div {
-    margin: 1vh 10vw;
+    display: flex;
+    justify-content: flex-start;
+    padding: 40px;
 }
+
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 30px 20px;
+    scroll-behavior: smooth;
+  }
+  .carousel-item {
+    flex: 0 0 400px;
+    height: 500px;
+    margin-right: 60px;
+    background: #ddd;
+    border-radius: 8px;
+    vertical-align: top;
+    text-align: center;
+    color: #555;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .carousel-item:last-child {
+    margin-right: 0;
+  }
 
 /* about page */
 #about div {

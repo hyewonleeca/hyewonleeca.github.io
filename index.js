@@ -24,11 +24,11 @@ sections.forEach((section, index) => {
 navLinks.forEach((link) => {
     link.addEventListener("click", function (event) {
         event.preventDefault();
-        
+
         const targetId = this.getAttribute("data-target");
         const targetSection = document.getElementById(targetId);
         if (targetSection) {
             targetSection.scrollIntoView({ behavior: "smooth" });
         }
     });
-  });
+});
