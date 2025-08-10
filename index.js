@@ -2,6 +2,9 @@
 const navbar = document.getElementById("navbar");
 const navLinks = navbar.querySelectorAll(".nav-page");
 const sections = document.querySelectorAll("section");
+const container = document.querySelector('.carousel-container');
+const indicators = document.querySelector('.carousel-indicators');
+const items = container.querySelectorAll('.carousel-item');
 
 // handling scroll event for navbar
 window.addEventListener("scroll", handleScroll);
@@ -32,3 +35,51 @@ navLinks.forEach((link) => {
         }
     });
 });
+
+let currentIndex = 0;
+
+// create indicator buttons
+function createIndicators() {
+  indicators.innerHTML = '';
+  items.forEach((_, index) => {
+    const btn = document.createElement('button');
+    if(index === 0) btn.classList.add('active');
+    btn.addEventListener('click', () => {
+      scrollToIndex(index);
+    });
+    indicators.appendChild(btn);
+  });
+}
+
+// scroll to index
+function scrollToIndex(index) {
+  const itemWidth = items[0].offsetWidth + 60;
+  container.scrollTo({
+    left: itemWidth * index,
+    behavior: 'smooth'
+  });
+  setActiveIndicator(index);
+  currentIndex = index;
+}
+
+// indicator activation
+function setActiveIndicator(index) {
+  indicators.querySelectorAll('button').forEach((btn, i) => {
+    btn.classList.toggle('active', i === index);
+  });
+}
+
+// indicator update to scroll
+container.addEventListener('scroll', () => {
+  const scrollLeft = container.scrollLeft;
+  const itemWidth = items[0].offsetWidth + 15;
+  const index = Math.round(scrollLeft / itemWidth);
+  if(index !== currentIndex) {
+    setActiveIndicator(index);
+    currentIndex = index;
+  }
+});
+
+// indiator initiation
+createIndicators();
+scrollToIndex(0);
