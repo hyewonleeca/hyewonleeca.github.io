@@ -103,7 +103,7 @@ p {
 
 /* skills page */
 #skills div {
-    margin: 1vh 10vw;
+    margin: 1vh 2vw;
 }
 
 h4 {
@@ -114,15 +114,15 @@ h4 {
 
 h3 {
     display: inline;
-    font-weight: 200;
-    font-size: clamp(10px, 2vw, 16px);
+    font-weight: 400;
+    font-size: clamp(16px, 2vw, 16px);
     padding-right: 2%;
 }
 
 h5 {
     font-weight: 300;
     line-height: 2;
-    font-size: clamp(8px, 1.2vw, 12px);
+    font-size: clamp(14px, 1.6vw, 16px);
 }
 
 #utils .border{
@@ -236,5 +236,5 @@ h5 {
 
 /* about page */
 #about div {
-    margin: 40px 10vw;
+    margin: 40px 2vw;
 }
