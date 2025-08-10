@@ -72,7 +72,6 @@ section {
     padding-top: 120px;
     position: relative;
     min-height: 100vh;
-    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,13 +149,16 @@ h5 {
 #works div {
     display: flex;
     justify-content: flex-start;
-    padding: 40px;
 }
+.carousel-wrapper {
+    margin: 0px;
+  }
 
 .carousel-container {
     display: flex;
     overflow-x: auto;
     padding: 30px 20px;
+    width: 100%;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
   }
@@ -181,6 +183,35 @@ h5 {
 
   .carousel-item:last-child {
     margin-right: 0;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 60px;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+  }
+
+  .carousel-btn:hover {
+    background: rgba(0,0,0,0.7);
+  }
+  
+  .prev-btn {
+    left: 5px;
+  }
+  
+  .next-btn {
+    right: 5px;
   }
 
   .carousel-indicators {

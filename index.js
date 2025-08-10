@@ -5,6 +5,9 @@ const sections = document.querySelectorAll("section");
 const container = document.querySelector('.carousel-container');
 const indicators = document.querySelector('.carousel-indicators');
 const items = container.querySelectorAll('.carousel-item');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
 
 // handling scroll event for navbar
 window.addEventListener("scroll", handleScroll);
@@ -36,7 +39,9 @@ navLinks.forEach((link) => {
     });
 });
 
+//** carousel controls **
 let currentIndex = 0;
+const itemWidth = items[0].offsetWidth + 60;
 
 // create indicator buttons
 function createIndicators() {
@@ -53,14 +58,22 @@ function createIndicators() {
 
 // scroll to index
 function scrollToIndex(index) {
-  const itemWidth = items[0].offsetWidth + 60;
-  container.scrollTo({
-    left: itemWidth * index,
-    behavior: 'smooth'
-  });
-  setActiveIndicator(index);
-  currentIndex = index;
+    if (index < 0) index = 0;
+    if (index > items.length - 1) index = items.length - 1;
+    container.scrollTo({
+      left: itemWidth * index,
+      behavior: 'smooth',
+    });
+    currentIndex = index;
 }
+
+prevBtn.addEventListener('click', () => {
+    scrollToIndex(currentIndex - 1);
+});
+
+nextBtn.addEventListener('click', () => {
+    scrollToIndex(currentIndex + 1);
+});
 
 // indicator activation
 function setActiveIndicator(index) {
